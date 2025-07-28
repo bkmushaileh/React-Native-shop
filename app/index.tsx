@@ -50,12 +50,4 @@ const styles = StyleSheet.create({
     margin: 10,
     gap: 5,
   },
-  productImage: {
-    width: 150,
-    height: 150,
-    borderRadius: 15,
-  },
-  productTitle: {
-    fontSize: 13,
-  },
 });

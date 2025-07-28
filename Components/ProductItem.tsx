@@ -32,19 +32,7 @@ const styles = StyleSheet.create({
     margin: 6,
     gap: 10,
   },
-  myTitle: {
-    fontSize: 17,
-  },
-  product: {
-    display: "flex",
 
-    flex: 1,
-    flexDirection: "row",
-    alignItems: "baseline",
-    padding: 10,
-    margin: 10,
-    gap: 15,
-  },
   productImage: {
     width: 150,
     height: 150,
