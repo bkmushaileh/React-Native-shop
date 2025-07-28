@@ -9,6 +9,7 @@ export default function Index() {
       name={product.name}
       price={product.price}
       image={product.image}
+      key={product.id}
     />
   ));
   console.log(myProduct);
