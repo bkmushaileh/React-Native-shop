@@ -20,4 +20,11 @@ export const productArray: product[] = [
     image:
       "https://anandakw.shop/cdn/shop/products/DileshSolanki-KristinaYogaMatBagShootPink-6_360x.jpg?v=1611912845",
   },
+  {
+    id: 3,
+    name: "Pink Yoga Mat",
+    price: "16.000 KD",
+    image:
+      "https://anandakw.shop/cdn/shop/products/DileshSolanki-KristinaYogaMatBagShootPink-6_360x.jpg?v=1611912845",
+  },
 ];
