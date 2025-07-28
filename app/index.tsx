@@ -1,6 +1,17 @@
+import { productArray } from "@/data/product";
+import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
+import FirstComponent from "../Components/ProductItem";
 
 export default function Index() {
+  const myProduct = productArray.map((product) => (
+    <FirstComponent
+      name={product.name}
+      price={product.price}
+      image={product.image}
+    />
+  ));
+  console.log(myProduct);
   return (
     <View style={styles.container}>
       <Text style={styles.myTitle}>Yoga Concept Store</Text>
@@ -11,34 +22,14 @@ export default function Index() {
           uri: "https://anandakw.shop/cdn/shop/files/ANANDA_-_BLACK_1200x1200.jpg?v=1614297297",
         }}
       />
-      <View style={styles.product}>
-        <View style={styles.container}>
-          <Image
-            style={styles.productImage}
-            source={{
-              uri: "https://anandakw.shop/cdn/shop/products/unnamed_1800x1800_54ae5757-54cf-42a4-ac0b-4b5662b78576_540x.jpg?v=1651756927",
-            }}
-          />
-          <Text style={styles.productTitle}>Prolite Yoga Mat</Text>
-          <Text style={styles.productTitle}>Price: 20.000 KD</Text>
-        </View>
-        <View style={styles.container}>
-          <Image
-            style={styles.productImage}
-            source={{
-              uri: "https://anandakw.shop/cdn/shop/products/DileshSolanki-KristinaYogaMatBagShootPink-6_360x.jpg?v=1611912845",
-            }}
-          />
-          <Text>Bangles - 1 lbs</Text>
-          <Text style={styles.productTitle}>Price: 16.000 KD</Text>
-        </View>
-      </View>
+      <View style={styles.product}>{myProduct}</View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    display: "flex",
     flex: 1,
     alignItems: "center",
     padding: 10,
@@ -49,6 +40,8 @@ const styles = StyleSheet.create({
     fontSize: 17,
   },
   product: {
+    display: "flex",
+
     flex: 1,
     flexDirection: "row",
     alignItems: "baseline",
